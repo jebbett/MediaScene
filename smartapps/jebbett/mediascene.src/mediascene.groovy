@@ -26,9 +26,9 @@ definition(
     description: "Control scenes based on media state and type",
     category: "My Apps",
     parent: parent ? "jebbett:MediaScene" : null,
-    iconUrl: "https://github.com/jebbett/MediaScene/raw/icons/Master/MediaScene.png",
-    iconX2Url: "https://github.com/jebbett/MediaScene/raw/icons/Master/MediaScene.png",
-    iconX3Url: "https://github.com/jebbett/MediaScene/raw/icons/Master/MediaScene.png"
+    iconUrl: "https://github.com/jebbett/MediaScene/raw/master/Icons/MediaScene.png",
+    iconX2Url: "https://github.com/jebbett/MediaScene/raw/master/Icons/MediaScene.png",
+    iconX3Url: "https://github.com/jebbett/MediaScene/raw/master/Icons/MediaScene.png"
 )
 
 
