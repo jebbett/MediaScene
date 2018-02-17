@@ -1,7 +1,7 @@
 /**
  *  Media Scene
  *
- *  Copyright 2016 Christian Hjelseth / Jake Tebbett
+ *  Copyright 2018 Jake Tebbett
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  *  in compliance with the License. You may obtain a copy of the License at:
@@ -302,16 +302,13 @@ def SetLevels(level, acolor, temp) {
         if (settings?.bDimOnlyIfOn1){
         	if(acolor != null){ 	hues1?.each 	{ hue -> if ("on" == hue.currentSwitch) 	{ hue.setColor([hue: hueColor, saturation: saturation, level: level]) } } }
             else if(temp != null){ 	hues1?.each 	{ hue -> if ("on" == hue.currentSwitch) 	{ hue.setColorTemperature(temp) } } }
-            else {					hues1?.each 	{ hue -> if ("on" == hue.currentSwitch) 	{ hue.setLevel(level) } } }
-            
+            else {					hues1?.each 	{ hue -> if ("on" == hue.currentSwitch) 	{ hue.setLevel(level) } } }           
         							dimmers1?.each 	{ bulb -> if ("on" == bulb.currentSwitch) 	{ bulb.setLevel(level) } }
-            
         }else{
         	// color takes priority over temperature, dimmers will still set temperature if available
         	if(acolor != null){		hues1?.setColor([hue: hueColor, saturation: saturation, level: level]) }
             else if(temp != null){	hues1?.setColorTemperature(temp) }
-
-            						dimmers1?.setLevel(level)
+			dimmers1?.setLevel(level)
         }
 	}
 }
